@@ -1,0 +1,31 @@
+From: r.gupta@apipharmamanufacturing.com
+To: qa-investigations@apipharmamanufacturing.com, ops-lead@apipharmamanufacturing.com
+Date: Mon, 20 Oct 2026 16:45:10 -0500
+Subject: URGENT: Investigation Request - High Residual Acetone in Clopidogrel Bisulfate Lot CLO-26-881
+
+Quality Team & Operations,
+
+Please initiate a critical deviation investigation for Clopidogrel Bisulfate Form II API, Batch CLO-26-881.
+
+Observed Non-Conformance:
+Headspace Gas Chromatography (GC) analysis performed this afternoon for residual solvents revealed Acetone at 6,420 ppm.
+Per USP <467> and our API finished release specification (SPEC-API-CLO-02), Acetone is a Class 3 solvent with an acceptance threshold of NMT 5,000 ppm. All other solvents (methanol, isopropanol, toluene) met specification limits (< 100 ppm).
+
+Current Containment:
+1. Drum lot CLO-26-881 (total net weight 310 kg) tagged and locked inside Vault B-4 Quarantine Zone.
+2. Warehouse staging order WH-2026-9812 cancelled.
+3. No product has shipped; customer packaging sites notified of delivery hold.
+
+Preliminary Context & Observations from Drying Operations:
+- Drying took place in Vacuum Rotary Cone Dryer VCD-102.
+- Operating cycle recipe DRY-CLO-VAC-03 specifies 18 hours at 45°C under 15 mbar vacuum.
+- Review of vacuum telemetry shows that during hours 10 through 14 of the drying cycle, condenser jacket cooling pump P-COND-02 tripped on thermal overload.
+- Condenser efficiency fell, leading to re-condensation of evaporated acetone vapors back into the dryer vacuum vapor line and refluxing into the powder bed.
+- Operator restarted pump P-COND-02 but did not extend the total vacuum drying time because standard SOP-DRY-05 lacks guidance on cycle extension criteria following condenser utility trips.
+
+We need a full 5 Whys RCA, investigation of vacuum condenser reliability, and CAPA before deciding whether re-drying of Lot CLO-26-881 is permissible under our rework/reprocessing SOP.
+
+Regards,
+Rajiv Gupta
+Quality Control Laboratory Manager
+API Operations Facility - Unit 1

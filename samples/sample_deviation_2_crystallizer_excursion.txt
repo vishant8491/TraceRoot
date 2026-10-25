@@ -1,0 +1,24 @@
+OPERATIONS SHIFT REPORT & PROCESS DEVIATION
+DEVIATION ID: DEV-2026-0504
+BUILDING / SUITE: API Finishing Suite 4, Crystallization Room CR-02
+API PRODUCT: Atorvastatin Calcium Trihydrate API
+BATCH: ATC-2026-042
+DATE & TIME: 2026-10-20 03:15 UTC
+INVESTIGATOR: Maria Santos (Principal Quality Assurance Specialist)
+
+OBSERVED EVENT / PROBLEM DESCRIPTION:
+During the controlled cooling crystallization of Atorvastatin Calcium lot ATC-2026-042 in 5,000L hastelloy crystallizer CR-401, a Critical Process Parameter (CPP) excursion occurred. The batch temperature dropped from 62.0°C to 28.5°C in 18 minutes (programmed linear cooling profile specifies 0.5°C/min; maximum allowable cooling rate is 0.8°C/min). Rapid shock cooling induced spontaneous secondary nucleation rather than seeded crystal growth. Subsequent in-process particle size distribution (PSD) analysis by laser diffraction (Malvern Mastersizer 3000) showed d(0.9) of 14.2 µm versus validated specification window of 45.0 - 65.0 µm, with severe fines generation and poor filtration drain rates on Nutsche Filter Dryer NFD-401.
+
+CONTAINMENT ACTIONS:
+- Crystallizer CR-401 agitation reduced to minimum speed (25 rpm) to prevent further shear attrition.
+- Filter dryer cake discharge halted. Lot ATC-2026-042 placed on formal QA Quarantine Hold.
+- Upstream crude salt solution batch ATC-2026-043 in hold tank HT-402 held at 65°C under nitrogen blanket; crystallization initiation paused.
+
+ROOT CAUSE INVESTIGATION NOTES:
+- SCADA DCS audit trail revealed that secondary chilled glycol loop supply valve V-GLY-401 failed 100% open due to an internal positioner feedback potentiometer mechanical seizure.
+- Chilled glycol at -5°C flooded the crystallizer half-pipe jacket rapidly.
+- Operator attempted manual override via DCS console, but manual override permissive had been password-restricted during a recent PLC firmware patch without operator training.
+- 6M Ishikawa analysis identified:
+  * Machine: Seizure of pneumatic positioner linkage on V-GLY-401; zero predictive vibration/stroke diagnostic telemetry.
+  * Method: SOP-CR-012 did not have emergency manual bypass valve operation procedure clearly posted on the skid.
+  * Measurement: In-line PAT FBRM (Focused Beam Reflectance Measurement) probe was out of service for recalibration, so nucleation runaway was not flagged until temperature crash finished.

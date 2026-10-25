@@ -1,0 +1,40 @@
+INCIDENT LOG & DEVIATION SUMMARY
+DEVIATION ID: DEV-2026-0419
+FACILITY: Active Pharmaceutical Ingredient Plant 3, Unit 02 (Synthesis & Isolation)
+PRODUCT: Candesartan Cilexetil API
+BATCH NUMBER: CC-2026-B089
+DATE OF INCIDENT: 2026-10-18 09:30 UTC
+REPORTED BY: Senior QC Analyst Dr. Evelyn Reed
+INVESTIGATION LEAD: James Vance (Lead API Process Engineer)
+
+INCIDENT DESCRIPTION (OBSERVED EVENT):
+During final batch release testing of Candesartan Cilexetil API lot CC-2026-B089, QC Laboratory identified an unexpected, unspecified impurity peak at Relative Retention Time (RRT) 1.42 via reverse-phase HPLC (Method QC-HPLC-CC-04, Agilent 1290 Infinity II system). The impurity measured at 0.28% w/w, exceeding the ICH Q3A / Finished API Specification limit of NMT 0.10% w/w (Individual Unknown Impurity). 
+
+PRIMARY TEST DATA:
+- Assay: 99.4% (Specification: 98.5% - 101.5%) - PASS
+- Water Content (KF): 0.18% (Specification: <= 0.30%) - PASS
+- Total Impurities: 0.72% (Specification: <= 1.00%) - PASS
+- Unknown Impurity RRT 1.42: 0.28% (Specification: <= 0.10%) - OUT OF SPECIFICATION (OOS-2026-0142)
+
+IMMEDIATE CONTAINMENT ACTIONS TAKEN:
+1. QC Laboratory logged laboratory OOS investigation OOS-2026-0142 under SOP-QC-088.
+2. Lot CC-2026-B089 (145.2 kg finished API in double polyethylene lined fiber drums) was quarantined in Drum Storage Suite D-12 with physical quarantine warning tags.
+3. ERP system status for lot CC-2026-B089 placed on "Quality Hold - Inactive" preventing warehouse transfer or packaging.
+4. Intermediate batch CC-INT-2026-B090 currently in Reactor R-202 was paused at the trityl-deprotection stage pending root cause clarification.
+
+INITIAL INVESTIGATION FINDINGS:
+Laboratory Phase 1 Investigation ruled out analytical error:
+- System suitability passed (column efficiency > 5000 theoretical plates, tailing factor 1.05).
+- Re-injection of standard and sample preparations from original vials confirmed 0.28% peak.
+- Fresh sample preparation by a second analyst on a separate HPLC instrument (Waters Alliance e2695) reproduced the identical 0.28% peak at RRT 1.42.
+Conclusion: Genuine process-related batch deviation, not a laboratory artifact.
+
+SUSPECTED PROCESS AREA & TIMELINE:
+- Synthesis Step 4: Trityl group deprotection of Candesartan trityl ester intermediate using aqueous hydrochloric acid in methanol / toluene biphasic mixture.
+- Reaction conducted in 3000L glass-lined reactor R-201 on 2026-10-16.
+- Historian trend review indicates that at 14:22 UTC on 2026-10-16, the reactor jacket temperature control valve (TCV-201) experienced a hunting cycle. Reactor internal temperature peaked at 58.4°C for 42 minutes (Operating parameter window: 40°C - 45°C).
+- Prolonged heating under acidic conditions is known to promote over-hydrolysis of the ester linkage, forming the des-ethyl carboxylic acid degradant typically eluting at RRT 1.42.
+
+OPERATIONAL CONTEXT & EQUIPMENT LOGS:
+- Maintenance log PM-R201-Q3 showed actuator diaphragm for TCV-201 was flagged for replacement during the previous turnaround but was deferred due to lack of spare part stock.
+- Shift handover log between Shift A and Shift B did not document the 42-minute temperature excursion as an alarm because high-temp audible alarm was silenced during shift changeover.
